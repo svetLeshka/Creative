@@ -1,0 +1,187 @@
+@import 'style';
+aside {
+	margin-right: 13px;
+	& > div:last-child {
+		flex: 1 1 auto;
+	}
+}
+
+.aside-info {
+	padding: 30px;
+	background-color: #fff;
+	position: relative;
+	border: 1px solid $grey-border;
+	margin-bottom: 20px;
+
+	&::before,
+	&::after {
+		content: '';
+		height: 100px;
+		background-color: #fff;
+		border: 1px solid $grey-border;
+		position: absolute;
+	}
+	
+	&::before {
+		width: 98%;
+		left: 1%;
+		bottom: -5px;
+		z-index: -1;
+	}
+	
+	&::after {
+		width: 96%;
+		left: 2%;
+		bottom: -9px;
+		z-index: -2;
+	}
+}
+
+.aside-info *[class *="__header"] {
+	font-weight: 700;
+	font-size: 1.3rem;
+	color: $black;
+}
+
+.aside-info *[class *="__text"] {
+	font-size: 0.92rem;
+	color: $light-black;
+	font-style: italic;
+	line-height: 1.5;
+}
+
+.aside-info *[class *="__date"] {
+	font-size: 0.9rem;
+	color: $dates;
+	font-style: italic;
+}
+
+.design-block {
+	> *:not(:last-child) {
+		margin-bottom: 10px;
+	}
+	*:last-child {
+		margin-bottom: 30px;
+	}
+	&__biline {
+		font-size: 0.92rem;
+		color: $dates;
+		font-style: italic;
+	}
+
+	&__content {
+		line-height: 2;
+		font-style: italic;
+	}
+}
+
+.updates-block {
+
+	&__header {}
+
+	&__input {
+		outline: 1px solid $grey;
+		border-radius: 4px;
+		padding: 5px 10px;
+		overflow: hidden;
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin: 10px 0;
+		width: calc(100% - 30px);
+
+		&::before {
+			content: '';
+			width: 100%;
+			height: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			box-shadow: 0 0 4px 4px #f0f0f0;
+		}
+	}
+}
+
+.updates-input {
+	
+	&__mail {
+		display: inline-block;
+		background-color: $grey;
+		color: #fff;
+		border-radius: 5px;
+		margin-right: 5px;
+		font-size: calc(14px + 10 * ((100vw - 768px) / (1300 - 768)));
+	}
+
+	&__input {
+		border: none;
+		background-color: transparent;
+		flex: 1 1 auto;
+		min-width: 105px;
+		font-size: calc(10px + 2 * ((100vw - 768px) / (1300 - 768)));
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__button {
+		cursor: pointer;
+		font-size: calc(10px + 2 * ((100vw - 320px) / (1300 - 320)));
+	}
+
+	&__focused {
+		background: linear-gradient(to bottom, $grey, #fff);
+	}
+}
+
+.posts-block {
+	margin-top: 30px;
+	&__header {
+		margin-bottom: 20px;
+	}
+
+	&__list {}
+}
+
+.posts-list {
+	list-style-image: url(../img/list-item.png);
+	margin-left: 13px;
+	&__elem {}
+}
+
+.elem-body {
+
+	&__text {}
+
+	&__date {
+		margin: 5px 0 10px 0;
+	}
+}
+
+.tags-block {
+	margin-top: 30px;
+}
+
+.wrapper-tags {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	row-gap: 3px;
+	column-gap: 3px;
+
+	&__elem {
+		cursor: pointer;
+	}
+}
+
+.aside-picture {
+	padding: 0 2%;
+	text-align: center;
+	&__img {
+		max-width: 300px;
+		width: 100%;
+		object-fit: cover;
+	}
+}

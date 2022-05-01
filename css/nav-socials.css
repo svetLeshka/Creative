@@ -1,0 +1,21 @@
+.nav-socials {
+  z-index: 2;
+  position: fixed;
+  left: -5px;
+  font-size: 2rem;
+  height: 168px;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+.nav-socials:hover {
+  opacity: 1;
+}
+
+.desktop {
+  top: 200px;
+}
+
+.mobile {
+  top: 100px;
+  opacity: 1;
+}

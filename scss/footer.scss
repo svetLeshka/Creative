@@ -1,0 +1,91 @@
+@import 'style';
+
+footer {
+	background-color: #343434;
+}
+
+.footer-wrapper {
+	min-height: 390px;
+	padding: 40px 45px 0 45px;
+}
+
+.footer-info {
+	display: flex;
+	gap: 30px;
+	align-items: center;
+	margin-bottom: 30px;
+
+	&__input {
+		outline: 1px solid $grey;
+		background-color: #fff;
+		border-radius: 4px;
+		padding: 5px 10px;
+		overflow: hidden;
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin: 10px 0;
+		width: calc(100% - 30px);
+		max-width: 400px;
+		
+		&::before {
+			content: '';
+			width: 100%;
+			height: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			box-shadow: 0 0 4px 4px #f0f0f0;
+		}
+	}
+
+	> p {
+		color: #fff;
+		line-height: 1.8;
+		width: 100%;
+	}
+}
+
+.footer-input {
+
+	&__focused {
+		background: linear-gradient(to bottom, $grey, #fff);
+	}
+
+	&__mail {
+		display: inline-block;
+		background-color: $grey;
+		color: #fff;
+		border-radius: 5px;
+		margin-right: 5px;
+		font-size: calc(14px + 10 * ((100vw - 768px) / (1300 - 768)));
+	}
+
+	&__input {
+		border: none;
+		background-color: transparent;
+		flex: 1 1 auto;
+		min-width: 105px;
+		font-size: calc(10px + 2 * ((100vw - 768px) / (1300 - 768)));
+		
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__button {
+		cursor: pointer;
+		font-size: calc(10px + 2 * ((100vw - 320px) / (1300 - 320)));
+	}
+}
+
+.footer-links {
+	display: flex;
+	gap: 20px;
+	margin-bottom: 40px;
+}
+
+.footer-copyright {
+	color: #7F7F7F;
+}
